@@ -24,6 +24,7 @@ jobs:
       - run: npm run test -- --coverage
       - run: npm run build
 
+      - run: node dist/index.js &
       - uses: stepci/stepci@main
         with:
           workflow: "backend/stepci/workflow.yml"
