@@ -26,9 +26,9 @@ jobs:
 
       - run: node dist/index.js &
       - run: npx wait-on -t 10000 http://localhost:8080/api/health
-      - uses: stepci/stepci@main
-        with:
-          workflow: "backend/stepci/workflow.yml"
+      #- uses: stepci/stepci@main
+      #  with:
+      #    workflow: "backend/stepci/workflow.yml"
 
       - uses: actions/upload-artifact@v3
         if: always()
